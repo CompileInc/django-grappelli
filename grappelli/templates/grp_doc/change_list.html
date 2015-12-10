@@ -1,5 +1,5 @@
 {% extends "admin/base_site.html" %}
-{% load i18n %}{% load url from future %}
+{% load i18n %}
 {% block bodyclass %}grp-doc{% endblock %}
 {% block content-class %}{% endblock %}
 {% block title %}Grappelli Documentation &raquo; Change List{% endblock %}
@@ -50,7 +50,6 @@
             <div class="g-d-24">
                 <div class="grp-doc-code"><pre><code>{% filter force_escape %}
 {% templatetag openblock %} extends "admin/base_site.html" {% templatetag closeblock %}
-{% templatetag openblock %} load url from future {% templatetag closeblock %}
 {% templatetag openblock %} load i18n admin_static admin_modify grp_tags {% templatetag closeblock %}
 {% templatetag openblock %} block bodyclass {% templatetag closeblock %}grp-change-list{% templatetag openblock %} endblock {% templatetag closeblock %}
 {% endfilter %}</code></pre></div>
@@ -116,7 +115,7 @@
     {% templatetag openblock %} if not is_popup {% templatetag closeblock %}
         <ul>
             <li><a href="../../">{% templatetag openblock %} trans "Home" {% templatetag closeblock %}</a></li>
-            <li><a href="../">{% templatetag openblock %} trans app_label|capfirst|escape {% templatetag closeblock %}</a></li>
+            <li><a href="../">{% templatetag openblock %} opts.app_config.verbose_name {% templatetag closeblock %}</a></li>
             <li>{% endfilter %}&#123;&#123; opts.verbose_name_plural|capfirst &#125;&#125;{% filter force_escape %}</li>
         </ul>
     {% templatetag openblock %} endif {% templatetag closeblock %}
@@ -358,7 +357,7 @@
     {% templatetag openblock %} if not is_popup {% templatetag closeblock %}
         <ul>
             <li><a href="../../">{% templatetag openblock %} trans "Home" {% templatetag closeblock %}</a></li>
-            <li><a href="../">{% templatetag openblock %} trans app_label|capfirst|escape {% templatetag closeblock %}</a></li>
+            <li><a href="../">{% templatetag openblock %} opts.app_config.verbose_name {% templatetag closeblock %}</a></li>
             <li>{% endfilter %}&#123;&#123; opts.verbose_name_plural|capfirst &#125;&#125;{% filter force_escape %}</li>
         </ul>
     {% templatetag openblock %} endif {% templatetag closeblock %}

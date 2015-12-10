@@ -28,12 +28,7 @@ We are testing with Firefox, Chrome and Safari. IE9 and Opera should work fine a
 Can I use another editor than TinyMCE?
 --------------------------------------
 
-Of course.
-
-Why are you using TinyMCE and not RedactorJS?
----------------------------------------------
-
-Unfortunately, Redactor currently produces strange/wrong HTML. Moreover, we're missing an easy way to define formatting–options as well as a possibility to insert classes. That being said, TinyMCE will be removed with version 2.5 of |grappelli|. Instead, we will add a skin for TinyMCE.
+Of course (better use markdown anyway).
 
 Why don't you use Twitter Bootstrap?
 ------------------------------------
@@ -43,7 +38,7 @@ For now, custom Compass-based stylesheets gives us much more options. But we do 
 Do you guys cooperate with the Django–Devs?
 -------------------------------------------
 
-Occasionally, we discuss features and implementations.
+Occasionally, we have been discussing features and implementations in the past.
 
 How can I contribute?
 ---------------------

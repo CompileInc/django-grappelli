@@ -4,7 +4,7 @@
    contain the root `toctree` directive.
 .. |grappelli| replace:: Grappelli
 .. |filebrowser| replace:: FileBrowser
-.. |version| replace:: 2.4.8 (development)
+.. |grappelliversion| replace:: 2.7.3
 
 .. _index:
 
@@ -16,14 +16,14 @@ Documentation
 This documentation covers version |version| of |grappelli|. |grappelli| is a grid-based alternative/extension to the `Django <http://www.djangoproject.com>`_ administration interface.
 
 .. note::
-    |grappelli| |version| requires Django 1.4.2+/1.5. |grappelli| is always developed against the lastest stable Django release and is NOT tested with Djangos trunk.
+    |grappelli| |version| requires Django 1.8. More on :ref:`versions`.
 
 Installation & Setup
 --------------------
 
 .. toctree::
    :maxdepth: 2
-   
+
    quickstart
    customization
 
@@ -32,7 +32,7 @@ Dashboard
 
 .. toctree::
    :maxdepth: 2
-   
+
    dashboard_setup
    dashboard_api
 
@@ -41,22 +41,17 @@ Internals
 
 .. toctree::
    :maxdepth: 2
-   
-   templates
-   javascripts
+
+   internals
 
 Help
 ----
 
 .. toctree::
-   :maxdepth: 1
-   
-   faq
-   bestpractice
-   thirdparty
-   troubleshooting
-   djangoissues
-   releasenotes
+   :maxdepth: 2
+
+   help
+   contributing
    changelog
 
 Code
@@ -74,11 +69,22 @@ Discussion
 
 Use the `Grappelli Google Group <http://groups.google.com/group/django-grappelli>`_ to ask questions or discuss features.
 
+.. _versions:
+
 Versions and Compatibility
 --------------------------
 
-* |grappelli| 2.4.8 (Development version, not yet released, see branch Stable/2.4.x)
-* |grappelli| 2.4.7 (October 16th, 2013): Compatible with Django 1.4.2+/1.5
-* |grappelli| 2.3.9 (September 6th, 2012): Compatible with Django 1.3
+**Grappelli is always developed against the latest stable Django release and is NOT tested with Djangos trunk.**
 
-Older versions are availabe at GitHub, but are not supported anymore.
+* Grappelli 2.7.2 (October 30th, 2015): Compatible with Django 1.8
+* Grappelli 2.6.5 (May 28th, 2015): Compatible with Django 1.7
+* Grappelli 2.5.7 (March 27th, 2015): Compatible with Django 1.6
+
+Current development branches:
+
+* Grappelli 2.7.3 (Development version for Django 1.8, see branch Stable/2.7.x)
+* Grappelli 2.6.6 (Development version for Django 1.7, see branch Stable/2.6.x)
+* Grappelli 2.5.8 (Development version for Django 1.6, see branch Stable/2.5.x)
+
+Older versions are available at GitHub, but are not supported anymore.
+Support for 2.5.x and 2.6.x is limited to security issues and very important bugfixes.

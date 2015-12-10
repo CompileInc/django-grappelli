@@ -200,6 +200,13 @@
 .grp-collapse {
     @include grp-collapse;
 }
+.grp-collapse,
+.grp-collapse .grp-row,
+.grp-collapse-handler {
+    &::selection {
+        background: transparent;
+    }
+}
 
 
 
@@ -228,6 +235,18 @@
     &.grp-last {
         border-bottom: 0;
         @include border-bottom-radius($grp-border-radius - 1px);
+    }
+    &.grp-row-hidden {
+        top: -1px;
+        margin-bottom: -1px;
+        padding: 0;
+        height: 0px;
+        font-size: 0;
+        line-height: 0;
+        border-top-color: $grp-module-background-color;
+        div {
+            display: none;
+        }
     }
     &.grp-cells {
         display: table-row;
