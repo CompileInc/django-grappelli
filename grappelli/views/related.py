@@ -161,8 +161,11 @@ class AutocompleteLookup(RelatedLookup):
         qs = self.get_filtered_queryset(qs)
         qs = self.get_searched_queryset(qs)
         if connection.vendor == 'postgresql':
-            distinct_columns = list(self.model._meta.ordering) + [self.model._meta.pk.column]
-            return qs.order_by(*distinct_columns).distinct(*distinct_columns)
+            ordering_columns = list(self.model._meta.ordering) + [self.model._meta.pk.column]
+            distinct_columns = [x.strip('-') for x in ordering_columns]
+            # return qs.order_by(*distinct_columns).distinct(*distinct_columns)
+            # fix for https://github.com/sehmaschine/django-grappelli/issues/701
+            return qs.order_by(*ordering_columns).distinct(*distinct_columns)
         else:
             return qs.distinct()
 
